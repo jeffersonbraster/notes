@@ -53,7 +53,7 @@ const BoardList = ({ orgId, query }: BoardListProps) => {
   return (
     <div>
       <h2 className="text-3xl">
-        {query.favorites ? "Boards Favoritos" : "Team Boards"}
+        {query.favorites ? "Boards Favoritos" : "Lista de Boards"}
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 mid:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 mt-8 gap-5 pb-10">
@@ -68,7 +68,7 @@ const BoardList = ({ orgId, query }: BoardListProps) => {
             authorName={board.authorName}
             createdAt={board._creationTime}
             orgId={board.orgId}
-            isFavorite={false}
+            isFavorite={board.isFavorite}
           />
         ))}
       </div>
